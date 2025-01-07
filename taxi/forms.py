@@ -6,7 +6,7 @@ from django.core.validators import RegexValidator
 from taxi.models import Driver, Car
 
 
-LICENSE_PATTERN = r"[A-Z]{3}[0-9]{5}"
+LICENSE_PATTERN = r"^[A-Z]{3}[0-9]{5}$"
 
 license_number = forms.CharField(
     validators=[RegexValidator(
